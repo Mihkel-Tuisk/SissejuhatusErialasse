@@ -34,7 +34,41 @@ body {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
+@keyframes shake {
+    0% { transform: translate(0); }
+    25% { transform: translate(-5px); }
+    50% { transform: translate(5px); }
+    75% { transform: translate(-5px); }
+    100% { transform: translate(0); }
+}
+
 #table {
     color: white;
     background-color: gray;
+    animation: shake 1s;
+    animation-iteration-count: infinite;
+}
+
+.clicked {
+    animation: shake 100ms;
+}
+
+.cookie-button {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    background-color: transparent;
+    border-radius: 75px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cookie-image {
+    width: 150px;
+    height: auto;
 }
